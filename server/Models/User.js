@@ -1,9 +1,10 @@
-const mon  = require("mongoose");
 
-const UserSchema = new mon.Schema({
+const {Schema , model}  = require("mongoose");
+
+const UserSchema = new Schema({
     name: {type: String},
     age: {type: Number},
     email:{type: String}
 })
-const UserModel = mon.model("users",UserSchema)
+const UserModel = model("users",UserSchema)
 module.exports = UserModel;
